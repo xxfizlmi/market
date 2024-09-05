@@ -569,6 +569,16 @@ video {
   margin-bottom: 2rem;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-32 {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -797,6 +807,14 @@ video {
 
 .ps-2 {
   padding-inline-start: 0.5rem;
+}
+
+.pr-32 {
+  padding-right: 8rem;
+}
+
+.pr-20 {
+  padding-right: 5rem;
 }
 
 .text-center {
