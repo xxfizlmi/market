@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="login"/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-07 10.31.37 PM"/>
+        <attribute name="created" value="VVNFUjtERVNLVE9QLUpCVDZGMjI7MjAyNC0xMC0wNzswOC4yOC4xNyBQTTsyNjEy"/>
+        <attribute name="edited" value="VVNFUjtERVNLVE9QLUpCVDZGMjI7MjAyNC0xMC0wNzsxMC4zMS4zNyBQTTsxOzI3MDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;1. Login, 2. Register, 3. Lupa Password&quot;" newline="True"/>
+            <declare name="halaman" type="Integer" array="False" size=""/>
+            <input variable="halaman"/>
+            <if expression="Halaman = 1">
+                <then>
+                    <call expression="Login"/>
+                </then>
+                <else>
+                    <if expression="Halaman = 2">
+                        <then>
+                            <call expression="Register"/>
+                        </then>
+                        <else>
+                            <if expression="3">
+                                <then>
+                                    <call expression="lupapassword"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                    <call expression="Login"/>
+                </else>
+            </if>
+            <output expression="&quot;Berhasil&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Login" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Username&quot;" newline="True"/>
+            <declare name="username, password, usernameRegister, passwordRegister" type="String" array="False" size=""/>
+            <input variable="username"/>
+            <output expression="&quot;Password&quot;" newline="True"/>
+            <input variable="password"/>
+            <if expression="username = usernameRegister &amp; password = passwordRegister">
+                <then>
+                    <output expression="&quot;Kembali Login&quot;" newline="True"/>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <if expression="username = &quot;xxfizlmi&quot; &amp;&amp; password = &quot;123&quot;">
+                        <then>
+                            <output expression="&quot;Berhasil Login&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Username atau Password yang salah&quot;" newline="True"/>
+                            <call expression="Login"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="lupapassword" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Lupa Password&quot;" newline="True"/>
+            <output expression="&quot;Email&quot;" newline="True"/>
+            <declare name="email" type="String" array="False" size=""/>
+            <input variable="email"/>
+            <if expression="email = &quot;kembali&quot;">
+                <then>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <if expression="email = &quot;a&quot;">
+                        <then>
+                            <call expression="otplupapassword"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Email Salah&quot;" newline="True"/>
+                            <call expression="lupapassword"/>
+                        </else>
+                    </if>
+                    <call expression="newpassword"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="newpassword" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="newpassword, confirmationpassword" type="String" array="False" size=""/>
+            <output expression="&quot;Password change&quot;" newline="True"/>
+            <output expression="&quot;New Password&quot;" newline="True"/>
+            <input variable="newpassword"/>
+            <output expression="&quot;Confirmation Password&quot;" newline="True"/>
+            <input variable="confirmationpassword"/>
+            <if expression="newpassword == confirmationpassword = true">
+                <then>
+                    <output expression="&quot;Berhasil Password baru&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Gagal password baru&quot;" newline="True"/>
+                    <call expression="newpassword"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="otplupapassword" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="otp" type="Integer" array="False" size=""/>
+            <output expression="&quot;OTP Lupa Password&quot;" newline="True"/>
+            <output expression="&quot;OTP&quot;" newline="True"/>
+            <input variable="otp"/>
+            <if expression="otp = 123">
+                <then>
+                    <output expression="&quot;Berhasil otp&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;OTP SALAH&quot;" newline="True"/>
+                    <call expression="otplupapassword"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Register" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name, ttl, nomorhp, usernameRegister, email, passwordRegister" type="String" array="False" size=""/>
+            <output expression="&quot;Register&quot;" newline="True"/>
+            <output expression="&quot;Name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;ttl&quot;" newline="True"/>
+            <input variable="ttl"/>
+            <output expression="&quot;Nomor HP&quot;" newline="True"/>
+            <input variable="nomorhp"/>
+            <output expression="&quot;Username&quot;" newline="True"/>
+            <input variable="usernameRegister"/>
+            <output expression="&quot;Email&quot;" newline="True"/>
+            <input variable="email"/>
+            <output expression="&quot;Password&quot;" newline="True"/>
+            <input variable="passwordRegister"/>
+            <if expression="name == passwordRegister = true">
+                <then>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <output expression="&quot;Name : &quot;&amp; name &amp; &quot;TTL : &quot; &amp; ttl &amp; &quot;Nomor Hp : &quot; &amp; nomorhp &amp; &quot;Username : &quot; &amp; usernameRegister &amp; &quot;Email : &quot; &amp; email &amp; &quot;Password : &quot; &amp; passwordRegister" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

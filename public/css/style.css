@@ -1,0 +1,69 @@
+* {
+
+}
+.primary {
+  background-color: blueviolet;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+.container-login {
+  align-content: center;
+  padding: 100px 0px ;
+}
+
+.card-login {
+  width: 30em;
+  height: max-content;
+  margin: auto;
+  border-radius: 20px;
+  border: 0px;
+  padding: 20px;
+  background-color: rgb(147, 163, 179);
+}
+
+h3 {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+input,
+button {
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+button {
+  background-color: blueviolet;
+  color: white;
+}
+
+a.register {
+  text-align: center;
+  margin: 25px;
+}
+a.forgotpassowrd {
+  margin: 10px;
+  text-align: end;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+    margin: 0;
+}
